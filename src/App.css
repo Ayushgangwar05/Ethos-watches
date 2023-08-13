@@ -1,38 +1,444 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Navbarleft {
   display: flex;
-  flex-direction: column;
+  gap: 1vw;
+  margin-left: 5.8vw;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.Navbarright {
+  display: flex;
+  gap: 1vw;
+  margin-right: 7vw;
+  align-items: center;
+}
+.Navbar {
+  display: flex;
+  width: 100%;
+  background-color: rgb(244, 244, 244);
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  position: fixed;
+  z-index: 1;
+  margin-top: -10vh;
+}
+.Navbar .Blankdiv {
+  border-left-style: solid;
+  border-left-color: #c4c1c0;
+  height: 6vh;
+}
+.Navbar i {
+  font-size: 11px;
+}
+.Navbar a {
+  font-size: 11px;
+  text-decoration: none;
+  color: black;
+}
+.Navbar .Navbarright .subnavbarright {
+  align-items: center;
+}
+.Navbar .Navbarright .subnavbarright h6 {
+  font-size: 12px;
+  margin-top: 1vh;
+}
+
+.Navbar .Navbarright #Wishlist:hover {
+  color: #9d0000;
+}
+.Navbar .Navbarright #Cart:hover {
+  color: #9d0000;
+}
+.Navbar .Navbarright .subnavbarright #Login:hover {
+  color: #9d0000;
+}
+.Navbar .Navbarright .subnavbarright #Singup:hover {
+  color: #9d0000;
+}
+.Ethosdiv {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  justify-content: space-between;
+  margin-top: 10vh;
+}
+.Ethosdiv .Leftside {
+  align-items: center;
+}
+.Ethosdiv .Leftside a {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-left: 6vw;
+  text-decoration: none;
+}
+.Ethosdiv .Leftside a h6 {
+  font-size: 50px;
+  color: black;
+}
+.Ethosdiv .Leftside .Blankrightdiv {
+  border-left-style: solid;
+  border-left-color: #9d0000;
+  height: 4vh;
+}
+.Ethosdiv .Midsidediv h6 {
+  margin-top: 20px;
+  color: #9d0000;
+  margin-right: 5vw;
+}
+.Ethosdiv .Endsidediv {
+  align-items: center;
+  margin-right: 5vw;
+}
+
+.Navbar1 {
+  width: 100%;
+  margin-top: 2vh;
+  height: 7vh;
+  box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.nav-item .dropdown-menu {
+  display: flex;
+  visibility: hidden;
+  gap: 7vw;
+}
+.Navbar1 .Subnavbar1 li a:hover {
+  color: #9d0000;
+}
+.nav-item:hover > .dropdown-menu {
+  display: block;
+  visibility: visible;
+  display: flex;
+}
+.Navbar1 .Subnavbar1 {
+  border-top-style: solid;
+  border-top-color: #c4c1c0;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 1.5vw;
+}
+.Navbar1 .Subnavbar1 li {
+  list-style: none;
+  margin-top: 1vh;
+}
+.Navbar1 .Subnavbar1 li a {
+  color: black;
+  text-decoration: none;
+}
+.Navbar1 .Subnavbar1 .searchbox {
+  margin-top: 2vh;
+}
+.Navbar1 .Navbardownpart {
+  display: flex;
+  margin-top: 3vh;
+  margin-left: 5vw;
+  gap: 0.5vw;
+  width: 80%;
+}
+.Navbar1 .Subnavbar1 li a {
+  font-size: 13.5px;
+}
+.Navbar1 .Navbardownpart a {
+  color: #c4c1c0;
+  font-size: 13px;
+  text-decoration: none;
+}
+.Navbar1 .Navbardownpart i {
+  color: #c4c1c0;
+  font-size: 14px;
+}
+.Navbar1 .Navbardownpart h6 {
+  color: #c4c1c0;
+  font-size: 13px;
+  margin-top: 1px;
+  font-weight: 400;
+}
+.Navbar1 .Navbar1img {
+  margin-top: 2vh;
+  width: 100%;
+  height: 20vh;
+  position: relative;
+}
+.Navbar1 .Navbar1img img {
+  width: 90%;
+  height: 20vh;
+  margin-left: 5vw;
+}
+.Navbar1 .Navbar1img h5 {
+  position: absolute;
+  top: 0;
+  color: white;
+  margin: 9vh 37vw;
+  width: 20vw;
+}
+
+.Filter {
+  display: flex;
+  width: 100%;
+  margin-top: 30vh;
+  justify-content: space-between;
+}
+.Filter .FilterRightside {
+  display: flex;
+  gap: 10vw;
+  margin-left: 5vw;
+  margin-top: 1.5vh;
+  box-shadow: 0px 0.1px 0px 0px;
+}
+.Filter .Nextpage .Pagenavigation ul li a {
+  color: black;
+}
+
+.Filterleftpart {
+  width: 30vw;
+}
+.Filterleftpart .subFilterleftpart {
+  display: flex;
+  gap: 9vw;
+  margin-left: 5vw;
+}
+.Filterleftpart .subFilterleftpart a {
+  text-decoration: none;
+}
+.Filterleftpart .Filterleftpartradiobutton {
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+.Filterleftpart .PriceFilterleftpart {
+  overflow: scroll;
+  height: 37vh;
+  width: 14vw;
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+.Filterleftpart .subPriceFilterleftpart a {
+  text-decoration: none;
+}
+.Filterleftpart .subPriceFilterleftpart {
+  display: flex;
+  gap: 10vw;
+  margin-left: 5vw;
+}
+.Filterleftpart .STOCKFilterpart {
+  margin-left: 5vw;
+  display: flex;
+  gap: 6vw;
+  margin-top: 2vh;
+  border-top-style: solid;
+  width: 14vw;
+  border-top-color: #c4c1c0;
+}
+.Filterleftpart .STOCKFilterpart a {
+  text-decoration: none;
+}
+.Filterleftpart .subSTOCKFilterpart {
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+.Filterleftpart .BrandFilterpart {
+  margin-left: 5vw;
+  display: flex;
+  gap: 9.3vw;
+  border-top-style: solid;
+  width: 14vw;
+  border-top-color: #c4c1c0;
+}
+.Filterleftpart .BrandFilterpart a {
+  text-decoration: none;
+}
+.Filterleftpart .subBrandFilterpart {
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+.Filterleftpart .CaseFilterpart {
+  margin-left: 5vw;
+  display: flex;
+  gap: 8vw;
+  border-top-style: solid;
+  width: 14vw;
+  border-top-color: #c4c1c0;
+}
+.Filterleftpart .CaseFilterpart a {
+  text-decoration: none;
+}
+.Filterleftpart .subSCaseFilterpart {
+  overflow: scroll;
+  height: 37vh;
+  width: 14vw;
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+.Filterleftpart .Leftpartimage {
+  width: 14vw;
+  margin: 3vh 5vw;
+}
+.Filterleftpart .Leftpartimage img {
+  width: 15.3vw;
+}
+
+.Trending h1 {
+  font-size: 15px;
+}
+.Trending .Trendingmain .leftTrending {
+  background-color: #e7e7e7;
+  width: 45vw;
+}
+.Trending .Trendingmain {
+  display: flex;
+  gap: 5vw;
+}
+.Trending .leftTrending {
+  margin-left: 5vw;
+}
+.Trending .leftTrending img {
+  width: 45vw;
+  height: 50vh;
+}
+.Trending .MainleftTrending {
+  display: flex;
+}
+.Trending .Trendingmain .MainleftTrending {
+  background-color: #e7e7e7;
+}
+.Trending .Trendingmain .MainleftTrending .rightTrending {
+  margin-top: 5vh;
+  margin-left: 3vw;
+}
+.Brandname {
+  width: 100%;
+  margin-top: 10vh;
+}
+.Brandname h1 {
+  font-size: 20px;
+  margin-left: 5vw;
+}
+.Brandname .Brandnameimg .Subbrannameimg {
+  width: 12vw;
+  height: 18vh;
+  border-style: solid;
+  margin-left: 5vw;
+  text-align: center;
+  border-color: #eae7e7;
+}
+.Brandname .Brandnameimg {
+  display: flex;
+}
+.BlankBotton {
+  border-bottom-style: solid;
+  width: 100%;
+}
+.Lifestyle {
+  width: 100%;
+}
+.Lifestyle h2 {
+  margin-left: 5vw;
+  font-size: 20px;
+  margin-top: 5vh;
+}
+.Lifestyle .flexLifestyle .subflexLifestyle {
+  margin-left: 5vw;
+  position: relative;
+}
+.Lifestyle .flexLifestyle .subflexLifestyle img {
+  width: 50vw;
+  height: 45vh;
+}
+.Lifestyle .flexLifestyle .subflexLifestyle .subflexLifestyleheading {
+  position: absolute;
+  top: 0;
+  margin-left: 5vw;
+  margin-top: 10vh;
+}
+.Lifestyle .flexLifestyle .subflexLifestyle a .flexlifestyleblack {
+  width: 50vw;
+  background-color: black;
+  height: 46vh;
+}
+.Lifestyle .flexLifestyle .lifestyleleftside .sublifestyleleftside {
+  position: relative;
+}
+.Lifestyle .flexLifestyle .lifestyleleftside .sublifestyleleftside a img {
+  width: 18vw;
+}
+
+.Experinece3d .videolick,
+.Video3d {
+  width: 22vw;
+  height: 46vh;
+  position: absolute;
+  margin-top: 11vh;
+  margin-left: 1vw;
+}
+.Help {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  gap: 10vw;
+  height: 10vh;
+  margin-top: 10vh;
+}
+.Help .Subhelp h1 {
+  color: white;
+  font-size: 18px;
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+.Help .Subhelp ul {
+  display: flex;
+  gap: 3vw;
+  margin-left: 2vw;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.Helpmain .Helpred {
+  width: 100%;
+  background-color: #9d0000;
+  height: 1vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.END {
+  display: flex;
+  width: 100%;
+  gap: 7vw;
+}
+
+.END .SubEnd h1 {
+  font-size: 20px;
+  margin-left: 5vw;
+  margin-top: 10vh;
+}
+.END .SubEnd .anchorend {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+}
+.END .SubEnd .anchorend a {
+  color: #5b5959;
+  text-decoration: none;
+  font-size: 15px;
+}
+.MainEnd .EndBlink {
+  width: 90%;
+  border-top-style: solid;
+  margin-left: 5vw;
+  margin-top: 7vh;
+}
+.MainEnd .MaindivLink {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vh;
+}
+.MainEnd .MaindivLink .EndLink {
+  margin-left: 5vw;
+  display: flex;
+  gap: 1vw;
+}
+.MainEnd .MaindivLink .EndLink a i {
+  color: black;
+}
+.MainEnd .MaindivLink .RightEnd {
+  margin-right: 5vw;
+}
+.MainEnd .SubEnd a:hover {
+  color: #9d0000;
 }
